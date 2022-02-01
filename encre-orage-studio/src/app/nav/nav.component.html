@@ -1,0 +1,65 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+        <h4 class="name">Encre Orage Studio</h4>
+        <p class="designation">Tatoo artist</p>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" (click)="sidenav.toggle()" routerLink="/home" routerLinkActive="active">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        <button mat-button class="menu-button" (click)="sidenav.toggle()" routerLink="/studio" routerLinkActive="active">
+            <mat-icon>palette</mat-icon>
+            <span>Studio</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>alternate_email</mat-icon>
+            <span>Contact</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>place</mat-icon>
+            <span>Access</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <a class="button is-light" alt="Buy NFTs" href="#">
+            <strong>Buy NFTs</strong>
+        </a>
+
+        <mat-divider></mat-divider>
+
+        <div class="links-social">
+            <a alt="link to facebook page" href="https://www.facebook.com/"><img alt="logo-facebook" src="../../assets/icon-fb.png"></a>
+            <a alt="link to instagram page" href="https://www.instagram.com/"><img alt="logo-instagram" src="../../assets/icon-instagram.png"></a>  
+        </div>
+
+        <img class="logo2 mat-elevation-z8" src="../../assets/white-vertical-logo.png" />
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+       <div id="row">
+
+           <div id="sidebar" *ngIf="!sidenav.opened">
+            <button id="open-close" mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+                <mat-icon *ngIf="!sidenav.opened">
+                    menu
+                </mat-icon>
+                <mat-icon *ngIf="sidenav.opened">
+                    close
+                </mat-icon>
+            </button>
+    
+            <img class="logo3 mat-elevation-z8" src="../../assets/white-vertical-logo2.png" />    
+           </div>
+
+           <div id="content">
+                <router-outlet></router-outlet>
+           </div>
+
+       </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,45 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <img src="../../assets/logo_white.png" width="32" height="32">
+      </a>
+  
+      <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div #navMenu id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a (click)="closeNavbar()" class="navbar-item" routerLink="/accueil" routerLinkActive="active">
+          Accueil
+        </a>
+  
+        <a (click)="closeNavbar()" class="navbar-item" routerLink="/social" routerLinkActive="active">
+          Réseaux sociaux
+        </a>
+
+        <a (click)="closeNavbar()" class="navbar-item" routerLink="/a-propos" routerLinkActive="active">
+            A Propos 
+        </a> 
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-light" alt="Buy NFTs" href="#">
+              <strong>Buy NFTs</strong>
+            </a>
+          </div>
+        </div>
+        <div class="navbar-footer">
+            <div class="links-social">
+                <a alt="link to facebook page" href="https://www.facebook.com/"><img alt="logo-facebook" src="../../assets/icon-fb.png"></a>
+                <a alt="link to instagram page" href="https://www.instagram.com/"><img alt="logo-instagram" src="../../assets/icon-instagram.png"></a>  
+            </div>
+        </div>
+      </div>
+    </div>
+  </nav>

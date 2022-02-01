@@ -1,0 +1,16 @@
+@import "../node_modules/bulma/bulma.sass";
+
+@font-face {
+    font-family: PlayfairDisplay-Black;
+    src: url(assets/fonts/PlayfairDisplay-Black.ttf) format("opentype");
+}
+
+html, body { 
+    height: 100%; 
+}
+
+body { 
+    margin: 0; 
+    font-family: PlayfairDisplay-Black, "Helvetica Neue", sans-serif; 
+}
+
